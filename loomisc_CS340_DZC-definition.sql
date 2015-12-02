@@ -155,8 +155,8 @@ CREATE TABLE dzc_weapon (
 	FOREIGN KEY (fid) REFERENCES dzc_faction (id) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 
-INSERT INTO dzc_weapon (name,energy,sh,ac,rf,rc) values ("Gauss Cannon",10,1,2,99,24);
-INSERT INTO dzc_weapon (name,energy,sh,ac,rf,rc) values ("Twin Ion Cannons",6,4,3,18,18);
+INSERT INTO dzc_weapon (fid,name,energy,sh,ac,rf,rc) values ((SELECT id FROM dzc_faction WHERE name="Shaltari"),"Gauss Cannon",10,1,2,99,24);
+INSERT INTO dzc_weapon (fid,name,energy,sh,ac,rf,rc) values ((SELECT id FROM dzc_faction WHERE name="Shaltari"),"Twin Ion Cannons",6,4,3,18,18);
 
 -- Create a table called dzc_unit_weapon with the following properties:
 -- uid - an integer which is a foreign key reference to dzc_unit
