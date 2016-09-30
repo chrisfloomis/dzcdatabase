@@ -7,6 +7,8 @@ if($mysqli->connect_errno){
 	echo "Connection error " . $mysqli->connect_errno . " " . $mysqli->connect_error;
 }
 
+header( "refresh:3;url=loomisc_CS340_DZC.php" );
+
 $error = 0;
 //print_r($_POST);
 echo "1ssMiddle value is " . $_POST['ssMid'];
@@ -91,6 +93,7 @@ if($error == 0){
 				echo "Execute failed: "  . $stmt->errno . " " . $stmt->error;
 			} else {
 				echo "Added " . $stmt->affected_rows . " rows to dzc_squadsize.";
+				echo "<br>Redirect back in 3 seconds.";
 			}
 		}
 	}

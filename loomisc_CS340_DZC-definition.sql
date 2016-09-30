@@ -175,7 +175,7 @@ CREATE TABLE dzc_unit_weapon (
 ) ENGINE=InnoDB;
 
 INSERT INTO dzc_unit_weapon (uid,wid,mf,arc) values ((SELECT id FROM dzc_unit WHERE name="Tomahawk"),(SELECT id from dzc_weapon WHERE name="Gauss Cannon"),6,"F/S/R");
+INSERT INTO dzc_unit_weapon (uid,wid,mf,arc) values ((SELECT id FROM dzc_unit WHERE name="Kukri"),(SELECT id from dzc_weapon WHERE name="Twin Ion Cannons"),6,"F/S/R");
 INSERT INTO dzc_unit_weapon (uid,wid,mf,arc) values ((SELECT id FROM dzc_unit WHERE name="Jaguar"),(SELECT id from dzc_weapon WHERE name="Gauss Cannon"),4,"F/S(Left)");
 INSERT INTO dzc_unit_weapon (uid,wid,mf,arc) values ((SELECT id FROM dzc_unit WHERE name="Jaguar"),(SELECT id from dzc_weapon WHERE name="Gauss Cannon"),4,"F/S(Right)");
-INSERT INTO dzc_unit_weapon (uid,wid,mf,arc) values ((SELECT id FROM dzc_unit WHERE name="Kukri"),(SELECT id from dzc_weapon WHERE name="Twin Ion Cannons"),6,"F/S/R");
 INSERT INTO dzc_unit_weapon (uid,wid,mf,arc) values ((SELECT id FROM dzc_unit WHERE name="Jaguar"),(SELECT id from dzc_weapon WHERE name="Twin Ion Cannons"),4,"F/S/R");

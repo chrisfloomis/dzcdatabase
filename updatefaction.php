@@ -7,6 +7,8 @@ if($mysqli->connect_errno){
 	echo "Connection error " . $mysqli->connect_errno . " " . $mysqli->connect_error;
 }
 
+header( "refresh:3;url=loomisc_CS340_DZC.php" );
+
 
 if(!(empty($_POST['newName'] != ""))){
 	if(!($stmt = $mysqli->prepare("UPDATE dzc_faction f SET f.name=(?) WHERE f.id=" . $_POST['faction']))){
@@ -36,4 +38,5 @@ if(!(empty($_POST['newHallmark'] != ""))){
 	}
 }
 
+	echo "<br>Redirect back in 3 seconds.";
 ?>

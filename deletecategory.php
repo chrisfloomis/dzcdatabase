@@ -7,6 +7,8 @@ if($mysqli->connect_errno){
 	echo "Connection error " . $mysqli->connect_errno . " " . $mysqli->connect_error;
 }
 
+header( "refresh:3;url=loomisc_CS340_DZC.php" );
+
 if(!($stmt = $mysqli->prepare("DELETE FROM dzc_category WHERE id=" . $_POST['category']))){
 	echo "Prepare failed: "  . $stmt->errno . " " . $stmt->error;
 }
@@ -14,5 +16,6 @@ if(!$stmt->execute()){
 	echo "Execute failed: "  . $stmt->errno . " " . $stmt->error;
 } else {
 	echo "Deleted " . $stmt->affected_rows . " from dzc_category.";
+	echo "<br>Redirect back in 3 seconds.";
 }
 ?>
